@@ -1,0 +1,56 @@
+/*
+ * Theme Name: All Apart
+ * Template: chaplin
+ * Description: Theme with crooked header and a pile of books loaded by javascript.
+ * Author: Peter Mumford
+*/
+
+.entry-content {
+  max-width: none;
+  p, ul, ol, small {
+    max-width: 75rem;
+  }
+}
+
+code, pre {
+  font-size: .95em !important;
+  font-family: courier !important;
+}
+
+
+.preview-title a {
+  position: relative;
+  transition: all 0.5s ease;
+  line-height: 1;
+  &:hover {
+    text-decoration: none;
+    color: #00529b;
+  }
+}
+
+.nav-links {
+  font-family: Merriweather,Georgia,'Times New Roman',Times,serif;
+  text-transform: lowercase;
+  font-size: .8em;
+  .arrow {
+    display: none;
+  }
+  .nav-previous {
+    .post-title:before {
+      content: '\f104';
+      font-family: "Font Awesome 5";
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 900;
+    }
+  }
+}
+
+.post-navigation {
+  a {
+    font-weight: bold !important;
+  }
+}
