@@ -1,5 +1,6 @@
 /*
  * Theme Name: All Apart
+ * Version: 2.6
  * Template: chaplin
  * Description: Theme with crooked header and a pile of books loaded by javascript.
  * Author: Peter Mumford
@@ -17,17 +18,22 @@ code, pre {
   font-family: courier !important;
 }
 
-
-.preview-title a {
-  position: relative;
-  transition: all 0.5s ease;
-  line-height: 1;
-  &:hover {
-    text-decoration: none;
-    color: #00529b;
-  }
+.preview-header {
+	.preview-title a {
+		transition: all 0.3s ease;
+		line-height: 1;
+		&:hover {
+			text-decoration: none;
+			color: #00529b;
+		}
+	}
 }
-
+.entry-content, .preview-excerpt {
+	a {
+		font-weight: bold;
+		text-decoration: none;
+	}
+}
 .nav-links {
   font-family: Merriweather,Georgia,'Times New Roman',Times,serif;
   text-transform: lowercase;
@@ -53,4 +59,63 @@ code, pre {
   a {
     font-weight: bold !important;
   }
+}
+
+.preview-media {
+	height: 375px;
+	.preview-media-link {
+		img {
+			height: 375px;
+			width: auto;
+			margin: 0 auto;
+			border: 1px solid white;
+		}
+	}
+}
+
+article.preview {
+	padding-top: 4rem;
+	border-top: 1px solid #062421;
+}
+
+.grid-item {
+	&:first-child, &:nth-child(2) {
+		article.preview {
+			padding-top: 0;
+			border-width: 0;
+		}
+	}
+}
+
+// Maybe a styled comment form will get more engagement?
+.comments-wrapper {
+	.comment-respond {
+		form {
+			padding: 20px;
+			background-color: SlateGray;
+			color: white;
+			border-radius: 5px;
+			input, textarea {
+				background-color: white;
+				color: darkSlateGray;
+			}
+			p.logged-in-as {
+				margin-top: 0;
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.nav-links {
+	.nav-previous .post-title:before {
+		content: none;
+	}
+	.arrow {
+		display: inline;
+		font-size: larger;
+		line-height: 1;
+	}
 }

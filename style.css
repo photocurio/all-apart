@@ -1,5 +1,6 @@
 /*
  * Theme Name: All Apart
+ * Version: 2.6
  * Template: chaplin
  * Description: Theme with crooked header and a pile of books loaded by javascript.
  * Author: Peter Mumford
@@ -13,13 +14,16 @@ code, pre {
   font-size: .95em !important;
   font-family: courier !important; }
 
-.preview-title a {
-  position: relative;
-  transition: all 0.5s ease;
+.preview-header .preview-title a {
+  transition: all 0.3s ease;
   line-height: 1; }
-  .preview-title a:hover {
+  .preview-header .preview-title a:hover {
     text-decoration: none;
     color: #00529b; }
+
+.entry-content a, .preview-excerpt a {
+  font-weight: bold;
+  text-decoration: none; }
 
 .nav-links {
   font-family: Merriweather,Georgia,'Times New Roman',Times,serif;
@@ -39,3 +43,40 @@ code, pre {
 
 .post-navigation a {
   font-weight: bold !important; }
+
+.preview-media {
+  height: 375px; }
+  .preview-media .preview-media-link img {
+    height: 375px;
+    width: auto;
+    margin: 0 auto;
+    border: 1px solid white; }
+
+article.preview {
+  padding-top: 4rem;
+  border-top: 1px solid #062421; }
+
+.grid-item:first-child article.preview, .grid-item:nth-child(2) article.preview {
+  padding-top: 0;
+  border-width: 0; }
+
+.comments-wrapper .comment-respond form {
+  padding: 20px;
+  background-color: SlateGray;
+  color: white;
+  border-radius: 5px; }
+  .comments-wrapper .comment-respond form input, .comments-wrapper .comment-respond form textarea {
+    background-color: white;
+    color: darkSlateGray; }
+  .comments-wrapper .comment-respond form p.logged-in-as {
+    margin-top: 0; }
+    .comments-wrapper .comment-respond form p.logged-in-as a {
+      text-decoration: underline; }
+
+.nav-links .nav-previous .post-title:before {
+  content: none; }
+
+.nav-links .arrow {
+  display: inline;
+  font-size: larger;
+  line-height: 1; }
