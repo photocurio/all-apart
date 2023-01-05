@@ -62,14 +62,6 @@
       "oAP" : "\/parts\/page-header.php",
       "oF" : 0
     },
-    "\/parts\/preview.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/parts\/preview.php",
-      "oF" : 0
-    },
     "\/screenshot.png" : {
       "ft" : 32768,
       "iS" : 156703,
