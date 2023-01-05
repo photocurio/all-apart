@@ -48,7 +48,7 @@ function all_apart_colors( $array ) {
 	$array['all-apart'] = array(
 		'name'   => _x( 'All Apart', 'Color scheme name', 'chaplin' ),
 		'colors' => array(
-			'background_color'                          => '#b2cecf',
+			'background_color'                          => '#ddeced',
 			'chaplin_primary_text_color'                => '#062421',
 			'chaplin_headings_text_color'               => '#062421',
 			'chaplin_secondary_text_color'              => '#547473',

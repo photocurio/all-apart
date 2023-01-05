@@ -17,6 +17,7 @@ get_header(); ?>
 	$archive_title    = '';
 	$archive_subtitle = '';
 
+	// The post ID really should not be hardcoded here!
 	$featured_page    = get_post( 2 );
 	$archive_title    = $featured_page->post_title;
 	$archive_subtitle = $featured_page->post_excerpt;

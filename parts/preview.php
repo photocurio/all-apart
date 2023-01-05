@@ -2,8 +2,8 @@
 	<?php
 	if ( has_post_thumbnail( $post->ID ) ) :
 		$fallback_image_url = chaplin_get_fallback_image_url();
-		$image_size         = 'Thumbnail';
-		$image_url          = get_the_post_thumbnail_url( $post->ID, $image_size ) ?: $fallback_image_url;
+		$thumbnail_url      = get_the_post_thumbnail_url( $post->ID, 'Thumbnail' );
+		$image_url          = $thumbnail_url ? $thumbnail_url : $fallback_image_url;
 
 		// If the post is password protected, show the fallback image (or no image, if the fallback image option is disabled).
 		if ( post_password_required( $post->ID ) ) {
@@ -14,10 +14,10 @@
 			?>
 	<figure class="preview-media">
 		<a href="<?php the_permalink(); ?>" class="preview-media-link">
-			<?php the_post_thumbnail( $image_size ); ?>
+			<?php the_post_thumbnail( 'Thumbnail' ); ?>
 		</a>
 	</figure><!-- .preview-media -->
-	<?php
+			<?php
 		endif;
 	endif;
 	?>
@@ -29,9 +29,9 @@
 			if ( $excerpt ) :
 				?>
 		<div class="preview-excerpt">
-			<?php echo apply_filters( 'the_excerpt', $excerpt ); ?>
+				<?php echo apply_filters( 'the_excerpt', $excerpt ); ?>
 		</div><!-- .preview-excerpt -->
-		<?php
+				<?php
 			endif;
 		endif;
 		chaplin_the_post_meta( $post->ID, 'archive' );
