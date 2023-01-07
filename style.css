@@ -1,6 +1,6 @@
 /*
  * Theme Name: All Apart
- * Version: 2.8
+ * Version: 2.9
  * Template: chaplin
  * Description: Theme with crooked header and a pile of books loaded by javascript.
  * Author: Peter Mumford
@@ -78,3 +78,9 @@ article.preview {
 
 strong.highlight {
   color: firebrick; }
+
+.admin-bar.overlay-header #site-header {
+  top: 46px; }
+  @media (min-width: 780px) {
+    .admin-bar.overlay-header #site-header {
+      top: 32px; } }
