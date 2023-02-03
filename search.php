@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The search results template.
+ *
+ * @package all-apart
+ */
+
+get_header(); ?>
 
 <main id="site-content" role="main">	
 	<div class="posts section-inner">
@@ -9,19 +16,19 @@
 		printf(
 			'<%2$s class="search-results-total-h4"><span id="search-results-total">%1$d</span> %3$s</%2$s>',
 			esc_html( $search_results_total ),
-			$heading,
+			esc_html( $heading ),
 			esc_html( $search_context )
 		);
 		if ( have_posts() ) :
 			/*
-			 * @hooked chaplin_output_previous_posts_link - 10
+			 * @hooked chaplin_output_previous_posts_link - 10.
 			 */
 			do_action( 'chaplin_posts_start' );
 			$post_grid_column_classes = chaplin_get_post_grid_column_classes();
 			?>
 			<div class="posts-grid grid load-more-target <?php echo esc_attr( $post_grid_column_classes ); ?>">
 				<?php
-				// Calculate the current offset
+				// Calculate the current offset.
 				$iteration = intval( $wp_query->get( 'posts_per_page' ) ) * intval( $wp_query->get( 'paged' ) );
 				while ( have_posts() ) :
 					the_post();
